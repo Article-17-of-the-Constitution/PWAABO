@@ -4,34 +4,37 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    public bool isPlayer1;
-    public float speed;
-    public Rigidbody2D rigidbody;
-
-    public KeyCode Up;
-    public KeyCode Down;
-
-    private float movement;
-    private Vector3 startPosition;
+    public float bounceAngleRange = 60f;
+    public float yourBallSpeed = 10.0f;
 
     void Start()
     {
-        startPosition = transform.position;
-        rigidbody = GetComponent<Rigidbody2D>();
+
     }
 
     
     void Update()
     {
-        movement = 0f;
-        if(Input.GetKey(Up)) { movement += 1f; }
-        if(Input.GetKey(Down)) { movement -= 1f; }
-        rigidbody.velocity = new Vector2(0, movement * speed);    
+
     }
 
     public void Reset()
     {
-        rigidbody.velocity = Vector3.zero;
-        transform.position = startPosition;
+
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            // 패들의 중심과 충돌 지점 간의 상대적인 위치를 계산
+            float relativePosition = (collision.transform.position.x - transform.position.x) / (transform.localScale.x / 2);
+
+            // 튀는 각도를 계산 (상대적인 위치를 기반으로)
+            float bounceAngle = relativePosition * bounceAngleRange;
+
+            // 튀는 각도를 적용하여 공의 방향을 조절
+            Vector2 newDirection = new Vector2(Mathf.Cos(Mathf.Deg2Rad * bounceAngle), Mathf.Sin(Mathf.Deg2Rad * bounceAngle));
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = newDirection * yourBallSpeed;
+        }
     }
 }
