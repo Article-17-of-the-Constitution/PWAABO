@@ -192,6 +192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1279011342632350633, guid: b3bdc353bb6bc4d44baad0667c56bd00, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 3401829978922475847, guid: b3bdc353bb6bc4d44baad0667c56bd00, type: 3}
       propertyPath: m_Name
       value: Scenes
@@ -239,6 +243,10 @@ PrefabInstance:
     - target: {fileID: 7325159836799725210, guid: b3bdc353bb6bc4d44baad0667c56bd00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948358693110137037, guid: b3bdc353bb6bc4d44baad0667c56bd00, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
