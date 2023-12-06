@@ -7,7 +7,7 @@ public class StartBtn : MonoBehaviour
 {
     public void GameStart()
     {
-        SceneManager.LoadScene("CharacterChoiceScene");
+        SceneManager.LoadScene("CCS");
     }
    
 }
