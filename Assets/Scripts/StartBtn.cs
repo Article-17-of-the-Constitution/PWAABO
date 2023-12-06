@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class StartBtn : MonoBehaviour
 {
     public void GameStart()
     {
-        SceneManager.LoadScene("CharacterChoiceScene");
+        SceneManager.LoadScene("CCS");
     }
     // Start is called before the first frame update
     void Start()
