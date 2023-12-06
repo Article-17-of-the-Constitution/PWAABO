@@ -9,6 +9,8 @@ TagManager:
   - bottom
   - Ground
   - Wall
+  - Paddle
+  - Item
   layers:
   - Default
   - TransparentFX

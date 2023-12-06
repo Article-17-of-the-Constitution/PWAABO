@@ -5,14 +5,9 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Ball : MonoBehaviour
 {
-    public float speed;
-    public Rigidbody2D rigidbody;
     public AudioClip DM_CGS_44;
     public AudioSource audioSource;
-
-
     public float ballspeed = 10f;
-
     private Vector2 balldirection;
     private bool isballreleased = false;
     
@@ -29,7 +24,7 @@ public class Ball : MonoBehaviour
             Vector3 paddleposition = GameObject.Find("Paddle").transform.position;
 
             Vector3 ballposition = paddleposition;
-            ballposition.y += 0.2f;
+            ballposition.y += 0.35f;
             transform.position = ballposition;
 
             if (Input.GetButtonDown("Fire1"))
@@ -49,13 +44,13 @@ public class Ball : MonoBehaviour
 
     public void Reset()
     {
-        rigidbody.velocity = Vector2.zero;
+        GetComponent<Rigidbody>().velocity = Vector2.zero;
         transform.position = Vector2.zero;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "brick")
+        if (collision.gameObject.CompareTag("brick"))
         {
             audioSource.PlayOneShot(DM_CGS_44);
             Destroy(collision.gameObject);
@@ -69,7 +64,7 @@ public class Ball : MonoBehaviour
         {
             float hitpoint = collision.contacts[0].point.x;
             float paddlecenter = collision.transform.position.x;
-            float angle = (hitpoint - paddlecenter) * 2.0f;
+            float angle = (hitpoint - paddlecenter) * 1.0f;
             balldirection = new Vector2(Mathf.Sin(angle), Mathf.Cos(angle)).normalized;
         }
         else if (collision.gameObject.CompareTag("Ground"))
@@ -77,6 +72,7 @@ public class Ball : MonoBehaviour
             audioSource.PlayOneShot(DM_CGS_44);
             GameManager.I.GameEnd();
         }
+
 
     }
 }

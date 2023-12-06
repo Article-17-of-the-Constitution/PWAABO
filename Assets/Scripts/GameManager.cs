@@ -9,32 +9,16 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    public DifficultyManager.DifficultyLevel currentDifficulty;
-    private float TimeLimit = 60f;
-
-    private float startTime;
-    private float elapsedTime;
+    private float TimeLimit = 90f;
     public Text timeTxt;
-    public GameObject GameOverPanel;
-    public GameObject WinPanel;
     public GameObject brick;
-    public AudioSource audioSource;
-    public AudioClip BGMend;
-    public AudioClip BGMclear;
-    float time;
     public static GameManager I;
-    private float easyDropRate = 0.1f;
-    private float hardDropRate = 0.05f;
+    public float DropRate = 1f;
+    public GameObject Item;
+    private int BrickCount = 0;
+    private float BrickXInterval = 0;
+    private float BrickYInterval = 0;
 
-    public Sprite itemSprite;
-
-    [Header("Ball")]
-    public Ball ball;
-
-
-    [Header("UI")]
-    public TextMeshProUGUI player1Text;
-    public TextMeshProUGUI player2Text;
     void Awake()
     {
         I = this;
@@ -47,14 +31,14 @@ public class GameManager : MonoBehaviour
         {
             initGame();
 
-            for (int i = 0; i < 64; i++)
+            for (int i = 0; i < BrickCount; i++)
             {
 
                 GameObject newBricks = Instantiate(brick);
                 newBricks.transform.parent = GameObject.Find("Brick").transform;
 
-                float x = (i / 8) * 2.06f - 7.2f;
-                float y = (i % 8) * 0.3f + 2.1f;
+                float x = (i / 8) * BrickXInterval - 5f;
+                float y = (i % 8) * BrickYInterval;
                 newBricks.transform.position = new Vector3(x, y, 0);
 
             }
@@ -63,7 +47,6 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        SetTimeLimit();
         TimeLimit -= Time.deltaTime;
 
 
@@ -74,54 +57,37 @@ public class GameManager : MonoBehaviour
         else
         {
             int bricksLeft = GameObject.Find("Brick").transform.childCount;
-            if (bricksLeft == 63)
+            if (bricksLeft == 0)
             {
                 GameClear();
             }
         }
     }
-    void SetTimeLimit()
+    void SetDifficulty()
     {
-        switch (currentDifficulty)
+        switch (DifficultyManager.SelectedDifficulty)
         {
             case DifficultyManager.DifficultyLevel.Easy:
-                TimeLimit = 60f;
+                TimeLimit *= 1f;
+                DropRate *= 0.2f;
+                BrickCount = 32;
+                BrickXInterval = 3.5f;
+                BrickYInterval = 0.4f;
                 break;
             case DifficultyManager.DifficultyLevel.Hard:
-                TimeLimit = 30f;
+                TimeLimit *= 0.5f;
+                DropRate *= 0.1f;
+                BrickCount = 64;
+                BrickXInterval = 1.4f;
+                BrickYInterval = 0.3f;
                 break;
         }
         Debug.Log("제한 시간이 " + TimeLimit + "초로 설정되었습니다.");
+        Debug.Log("드랍율이 " + DropRate + "로 설정되었습니다.");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ball"))
-        {
-            float dropRate = (currentDifficulty == DifficultyManager.DifficultyLevel.Easy) ? easyDropRate : hardDropRate;
-
-            if (Random.value <= dropRate)
-            {
-                SpawnItem();
-            }
-            Destroy(gameObject);
-        }
-    }
-    void SpawnItem()
-    {
-        Vector3 spawnPosition = transform.position;
-
-        GameObject item = new GameObject("Item");
-        item.transform.position = spawnPosition;
-
-        SpriteRenderer spriteRenderer = item.AddComponent<SpriteRenderer>();
-        spriteRenderer.sprite = itemSprite;
-
-        Debug.Log("아이템이 생성되었습니다!");
-    }
     public void GameEnd()
     {
-        Time.timeScale = 0.0f;
         SceneManager.LoadScene("GameOverScene");
     }
 
@@ -132,8 +98,7 @@ public class GameManager : MonoBehaviour
     void initGame()
     {
         Time.timeScale = 1.0f;
-        time = 60.0f;
-
+        SetDifficulty();
     }
 
 

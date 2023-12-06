@@ -10,7 +10,7 @@ public class DifficultyManager : MonoBehaviour
     {
         Easy,Hard
     }
-    public static DifficultyLevel SelectedDifficulty = DifficultyLevel.Easy;
+    public static DifficultyLevel SelectedDifficulty;
 
     public Button easyButton;
     public Button hardButton;
