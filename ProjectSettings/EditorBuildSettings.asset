@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SelectScene.unity
     guid: b50e1e77eba0abf4694e3745306fc29b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DifficultyScene.unity
     guid: c48e832b83f2bf14993276c3382c5c5e
   - enabled: 1
@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: d89726efe61326b4fa760b36943b4bad
+  - enabled: 1
+    path: Assets/Scenes/DCS.unity
+    guid: 419abf2e2615e1a43bbac6c7d59d5f0e
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: 1037c77951226fe4c81c35b9a254a6d1
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: e72a75813c451c04dab89d00ccf13d85
   m_configObjects: {}

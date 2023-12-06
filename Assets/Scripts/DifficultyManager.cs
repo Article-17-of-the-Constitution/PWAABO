@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DifficultyManager : MonoBehaviour
@@ -23,10 +24,12 @@ public class DifficultyManager : MonoBehaviour
     {
         SelectedDifficulty = DifficultyLevel.Easy;
         Debug.Log("난이도가 Easy로 설정되었습니다.");
+        SceneManager.LoadScene("Stage1Scene");
     }
     void OnHardButtonClick()
     {
         SelectedDifficulty = DifficultyLevel.Hard;
         Debug.Log("난이도가 Hard로 설정되었습니다.");
+        SceneManager.LoadScene("Stage1Scene");
     }
 }

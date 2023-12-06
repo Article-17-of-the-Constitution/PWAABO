@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 public class GameManager : MonoBehaviour
 {
     public DifficultyManager.DifficultyLevel currentDifficulty;
-    private float defaultTimeLimit = 60f;
+    private float TimeLimit = 60f;
 
     private float startTime;
     private float elapsedTime;
@@ -59,31 +59,24 @@ public class GameManager : MonoBehaviour
 
             }
         }
-        startTime = Time.time;
-        currentDifficulty = DifficultyManager.SelectedDifficulty;
-        SetTimeLimit();
+
     }
     void Update()
     {
-        elapsedTime = Time.time - startTime;
+        SetTimeLimit();
+        TimeLimit -= Time.deltaTime;
 
-        if (elapsedTime >= defaultTimeLimit)
-        {
-            EndGame();
-        }
-        time -= Time.deltaTime;
-        //timeTxt.text = time.ToString("N2");
-        if (time <= 0)
+
+        if (TimeLimit <= 0)
         {
             GameEnd();
         }
         else
         {
             int bricksLeft = GameObject.Find("Brick").transform.childCount;
-            if (bricksLeft == 0)
+            if (bricksLeft == 63)
             {
                 GameClear();
-
             }
         }
     }
@@ -92,18 +85,15 @@ public class GameManager : MonoBehaviour
         switch (currentDifficulty)
         {
             case DifficultyManager.DifficultyLevel.Easy:
-                defaultTimeLimit = 60f;
+                TimeLimit = 60f;
                 break;
             case DifficultyManager.DifficultyLevel.Hard:
-                defaultTimeLimit = 30f;
+                TimeLimit = 30f;
                 break;
         }
-        Debug.Log("제한 시간이 " + defaultTimeLimit + "초로 설정되었습니다.");
+        Debug.Log("제한 시간이 " + TimeLimit + "초로 설정되었습니다.");
     }
-    void EndGame()
-    {
-        Debug.Log("게임 종료! 경과 시간: " + elapsedTime + "초");
-    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
@@ -131,6 +121,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameEnd()
     {
+        Time.timeScale = 0.0f;
         SceneManager.LoadScene("GameOverScene");
     }
 

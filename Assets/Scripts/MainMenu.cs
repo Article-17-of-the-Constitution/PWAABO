@@ -19,24 +19,24 @@ public class MainMenu : MonoBehaviour
     public void OnClickGameStart() 
     {
 
-        Debug.Log("게임시작");
+        SceneManager.LoadScene("CCS");
     }
     public void OnClickCharacterChoice() 
     {
-        SceneManager.LoadScene("CCS");
+        SceneManager.LoadScene("DCS");
     }
     public void OnClickLevelChoiceScene() 
     {
-        Debug.Log("난이도 선택");
+        SceneManager.LoadScene("Stage1Scene");
     }
-    public void OnClickOption() 
+    public void OnClickRetry() 
     {
-        Debug.Log("옵션");
+        SceneManager.LoadScene("StartScene");
     }
 
     public void OnClickQuit() 
     {
-        Debug.Log("");
+        SceneManager.LoadScene("CCS");
 
     }
 }
