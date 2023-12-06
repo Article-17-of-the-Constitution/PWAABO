@@ -311,6 +311,8 @@ MonoBehaviour:
   brick: {fileID: 2831505403418182171, guid: a2c08644802033949b3e7d16d048272f, type: 3}
   DropRate: 1
   Item: {fileID: 0}
+  Naruhodo: {fileID: 4867157406354532360, guid: 73bcbaf79209bf043ae5822266a64342, type: 3}
+  Mitsurugi: {fileID: 2844376202557983369, guid: 5792088a58699ef4c9438c8687dbf223, type: 3}
 --- !u!4 &906231327
 Transform:
   m_ObjectHideFlags: 0

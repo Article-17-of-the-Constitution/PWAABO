@@ -225,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4282775935154983452, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickCharacterChoice
+      value: ChoiceMitsurugi
       objectReference: {fileID: 0}
     - target: {fileID: 4282775935154983452, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6388261720534831141, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickCharacterChoice
+      value: ChoiceNaluhodo
       objectReference: {fileID: 0}
     - target: {fileID: 6388261720534831141, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -368,6 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf0a882243af6147addca7f08b830b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Naruhodo: {fileID: 0}
+  Mitsurugi: {fileID: 0}
 --- !u!114 &312417361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,6 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf0a882243af6147addca7f08b830b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Naruhodo: {fileID: 4867157406354532360, guid: 73bcbaf79209bf043ae5822266a64342, type: 3}
+  Mitsurugi: {fileID: 2844376202557983369, guid: 5792088a58699ef4c9438c8687dbf223, type: 3}
 --- !u!1001 &435629572
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ TagManager:
   - Wall
   - Paddle
   - Item
+  - Naruhodo
+  - Mitsurugi
   layers:
   - Default
   - TransparentFX

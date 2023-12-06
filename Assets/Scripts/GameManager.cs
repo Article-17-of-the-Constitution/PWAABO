@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private int BrickCount = 0;
     private float BrickXInterval = 0;
     private float BrickYInterval = 0;
+    public GameObject Naruhodo;
+    public GameObject Mitsurugi;
 
     void Awake()
     {
@@ -25,23 +27,11 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+
         string currentSceneName = SceneManager.GetActiveScene().name;
         if (currentSceneName == "Stage1Scene")
         {
-            initGame();
-
-            for (int i = 0; i < BrickCount; i++)
-            {
-
-                GameObject newBricks = Instantiate(brick);
-                newBricks.transform.parent = GameObject.Find("Brick").transform;
-
-                float x = (i / 8) * BrickXInterval - 5f;
-                float y = (i % 8) * BrickYInterval;
-                newBricks.transform.position = new Vector3(x, y, 0);
-
-            }
+            InitGame();
         }
 
     }
@@ -85,21 +75,51 @@ public class GameManager : MonoBehaviour
         Debug.Log("제한 시간이 " + TimeLimit + "초로 설정되었습니다.");
         Debug.Log("드랍율이 " + DropRate + "로 설정되었습니다.");
     }
-
-    public void GameEnd()
+    void SetPlayer()
     {
-        SceneManager.LoadScene("GameOverScene");
+        switch (SceneChanger.SelectedPlayer)
+        {
+            case SceneChanger.Player.Naruhodo:
+                GameObject newPlayer1 = Instantiate(Naruhodo);
+                newPlayer1.transform.parent = GameObject.Find("Paddle").transform;
+                break;
+            case SceneChanger.Player.Mitsurugi:
+                GameObject newPlayer2 = Instantiate(Mitsurugi);
+                newPlayer2.transform.parent = GameObject.Find("Paddle").transform;
+                break;
+        }
+    }
+    void SetBricks()
+    {
+        for (int i = 0; i < BrickCount; i++)
+        {
+
+            GameObject newBricks = Instantiate(brick);
+            newBricks.transform.parent = GameObject.Find("Brick").transform;
+
+            float x = (i / 8) * BrickXInterval - 5f;
+            float y = (i % 8) * BrickYInterval;
+            newBricks.transform.position = new Vector3(x, y, 0);
+
+        }
     }
 
-    public void GameClear()
-    {
-        SceneManager.LoadScene("VictoryScene");
-    }
-    void initGame()
-    {
-        Time.timeScale = 1.0f;
-        SetDifficulty();
-    }
+        public void GameEnd()
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+
+        public void GameClear()
+        {
+            SceneManager.LoadScene("VictoryScene");
+        }
+        void InitGame()
+        {
+            Time.timeScale = 1.0f;
+            SetDifficulty();
+            SetPlayer();
+            SetBricks();
+        }
 
 
-}
+    } 
