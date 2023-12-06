@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CCS.unity
     guid: 759e087dfbdf33940a0a01b984e45389
+  - enabled: 1
+    path: Assets/Scenes/Stage1Scene.unity
+    guid: 192d7e4ded3b0294c8e694d9c0b7b7b4
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: d89726efe61326b4fa760b36943b4bad
   m_configObjects: {}
