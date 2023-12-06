@@ -209,19 +209,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4817550516105222394, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 200
+      value: 209
       objectReference: {fileID: 0}
     - target: {fileID: 4817550516105222394, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -153
+      value: -159
       objectReference: {fileID: 0}
     - target: {fileID: 6069070323857691239, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -200
+      value: -195
       objectReference: {fileID: 0}
     - target: {fileID: 6069070323857691239, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -153
+      value: -159
       objectReference: {fileID: 0}
     - target: {fileID: 6752410903497953075, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_RootOrder
@@ -272,10 +272,10 @@ PrefabInstance:
     - {fileID: 2205918073109076355, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1271320861063360577, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 680193303}
     - targetCorrespondingSourceObject: {fileID: 1271320861063360577, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
-      insertIndex: -1
+      insertIndex: 1
       addedObject: {fileID: 1117647990}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 680193305}
   - component: {fileID: 680193304}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 218.5, y: 26.624}
-  m_SizeDelta: {x: 350, y: 300}
+  m_AnchoredPosition: {x: 190.49023, y: 7.0097}
+  m_SizeDelta: {x: 349.0195, y: 284.0194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680193304
 MonoBehaviour:
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 1117647992}
   - component: {fileID: 1117647991}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,8 +460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -215.39, y: 24}
-  m_SizeDelta: {x: 350, y: 300}
+  m_AnchoredPosition: {x: -177.09265, y: 7.0097046}
+  m_SizeDelta: {x: 375.8146, y: 284.02}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1117647991
 MonoBehaviour:
