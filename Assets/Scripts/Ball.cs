@@ -59,6 +59,7 @@ public class Ball : MonoBehaviour
         {
             audioSource.PlayOneShot(DM_CGS_44);
             Destroy(collision.gameObject);
+            balldirection = Vector2.Reflect(balldirection, collision.contacts[0].normal);
         }
         if(collision.gameObject.CompareTag("Wall"))
         {

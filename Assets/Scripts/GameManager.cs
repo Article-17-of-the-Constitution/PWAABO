@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
             EndGame();
         }
         time -= Time.deltaTime;
-        timeTxt.text = time.ToString("N2");
+        //timeTxt.text = time.ToString("N2");
         if (time <= 0)
         {
             GameEnd();
