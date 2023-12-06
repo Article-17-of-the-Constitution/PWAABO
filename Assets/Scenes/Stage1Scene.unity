@@ -959,7 +959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868141005213193371, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1249334119670488256, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
       propertyPath: m_Color.a
@@ -1035,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6859403141616280614, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6859403141616280614, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1185,6 +1185,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1350434594, guid: 4a55ac81091f0054f9f9e0cc8dbb8e65, type: 3}
+    - target: {fileID: 8325423756121836556, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9219615325158231539, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
       propertyPath: m_Name
       value: Canvas
