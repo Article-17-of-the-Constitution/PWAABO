@@ -308,10 +308,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDifficulty: 0
-  timeTxt: {fileID: 0}
+  timeTxt: {fileID: 1379937382}
   GameOverPanel: {fileID: 0}
   WinPanel: {fileID: 0}
-  brick: {fileID: 0}
+  brick: {fileID: 2831505403418182171, guid: a2c08644802033949b3e7d16d048272f, type: 3}
   audioSource: {fileID: 0}
   BGMend: {fileID: 0}
   BGMclear: {fileID: 0}
@@ -553,6 +553,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 237945427054080455, guid: 704a0a06be9be6e4c935438c2b1261ac, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 484690529324937348, guid: 704a0a06be9be6e4c935438c2b1261ac, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 2700120277990399978, guid: 704a0a06be9be6e4c935438c2b1261ac, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -604,6 +612,10 @@ PrefabInstance:
     - target: {fileID: 8853671873290568171, guid: 704a0a06be9be6e4c935438c2b1261ac, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8988106899289748077, guid: 704a0a06be9be6e4c935438c2b1261ac, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1186,6 +1198,10 @@ PrefabInstance:
     - target: {fileID: 9219615325158231539, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219615325158231539, guid: 5b74244c917002943a5d011bf62ddf33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

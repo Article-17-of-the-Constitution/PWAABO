@@ -131,20 +131,12 @@ public class GameManager : MonoBehaviour
     }
     public void GameEnd()
     {
-        Time.timeScale = 0.00f;
-        audioSource.clip = BGMend;
-        audioSource.Play();
-
-        GameOverPanel.SetActive(true);
-
+        SceneManager.LoadScene("GameOverScene");
     }
 
     public void GameClear()
     {
-        Time.timeScale = 0.00f;
-        audioSource.clip = BGMclear;
-        audioSource.Play();
-        WinPanel.SetActive(true);
+        SceneManager.LoadScene("VictoryScene");
     }
     void initGame()
     {

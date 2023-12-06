@@ -3,7 +3,18 @@ guid: 7a03f195768ffa840ad395687389a936
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - timeTxt: {instanceID: 0}
+  - GameOverPanel: {instanceID: 0}
+  - WinPanel: {instanceID: 0}
+  - brick: {fileID: 2831505403418182171, guid: a2c08644802033949b3e7d16d048272f, type: 3}
+  - audioSource: {instanceID: 0}
+  - BGMend: {instanceID: 0}
+  - BGMclear: {instanceID: 0}
+  - itemSprite: {instanceID: 0}
+  - ball: {instanceID: 0}
+  - player1Text: {instanceID: 0}
+  - player2Text: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

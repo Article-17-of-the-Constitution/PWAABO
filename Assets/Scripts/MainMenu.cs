@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnClickCharacterChoice() 
     {
-        Debug.Log("캐릭터 선택");
+        SceneManager.LoadScene("CCS");
     }
     public void OnClickLevelChoiceScene() 
     {
