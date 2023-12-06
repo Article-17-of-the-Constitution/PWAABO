@@ -1,37 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    public bool isPlayer1;
-    public float speed;
-    public Rigidbody2D rigidbody;
+    Rigidbody2D rb;
+    public float speed = 10;
+    float x = 0;
 
-    public KeyCode Up;
-    public KeyCode Down;
+    private Vector3 paddleposition;
 
-    private float movement;
-    private Vector3 startPosition;
-
+    // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
-        rigidbody = GetComponent<Rigidbody2D>();
+        paddleposition = transform.position;
     }
 
-    
+    // Update is called once per frame
     void Update()
     {
-        movement = 0f;
-        if(Input.GetKey(Up)) { movement += 1f; }
-        if(Input.GetKey(Down)) { movement -= 1f; }
-        rigidbody.velocity = new Vector2(0, movement * speed);    
+        x = Input.GetAxis("Horizontal");
+    }
+    private void FixedUpdate()
+    {
+        Paddlemove();
     }
 
-    public void Reset()
+    private void Paddlemove()
     {
-        rigidbody.velocity = Vector3.zero;
-        transform.position = startPosition;
+        paddleposition.x += x * speed * Time.deltaTime;
+        paddleposition.x = Mathf.Clamp(paddleposition.x, -8f, 8f);
+        transform.position = paddleposition;
     }
 }

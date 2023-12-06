@@ -149,6 +149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4817550516105222394, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_AnchoredPosition.x
+<<<<<<< Updated upstream
       value: 206
       objectReference: {fileID: 0}
     - target: {fileID: 4817550516105222394, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
@@ -162,6 +163,29 @@ PrefabInstance:
     - target: {fileID: 6069070323857691239, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -147.25
+=======
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817550516105222394, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -114.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069070323857691239, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069070323857691239, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258713925867035180, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258713925867035180, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 100
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6752410903497953075, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_RootOrder
@@ -205,6 +229,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6752410903497953075, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616724535205883783, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
+      propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
