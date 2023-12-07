@@ -269,11 +269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6388261720534831141, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChoiceNaluhodo
+      value: ChoiceNaruhodo
       objectReference: {fileID: 0}
     - target: {fileID: 6388261720534831141, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
+      value: SceneChanger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6388261720534831141, guid: 339546622fed4874fb8e6ac196afb00c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

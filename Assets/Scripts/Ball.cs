@@ -70,7 +70,7 @@ public class Ball : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ground"))
         {
             audioSource.PlayOneShot(DM_CGS_44);
-            GameManager.I.GameEnd();
+            GameManager.I.LoseLife();
         }
 
 

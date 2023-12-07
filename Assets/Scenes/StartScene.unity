@@ -437,7 +437,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4583090736488722118, guid: 7cfdd01f587364e4a9ba22235338216d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickGameStart
+      value: GoCCS
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583090736488722118, guid: 7cfdd01f587364e4a9ba22235338216d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneChanger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5164860042705355640, guid: 7cfdd01f587364e4a9ba22235338216d, type: 3}
       propertyPath: m_Name

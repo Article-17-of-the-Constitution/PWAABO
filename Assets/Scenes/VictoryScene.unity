@@ -140,6 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf0a882243af6147addca7f08b830b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Naruhodo: {fileID: 0}
+  Mitsurugi: {fileID: 0}
 --- !u!1 &1198637693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8828107611080313460, guid: fa179c804cafcfa41bbae7a87299d46e, type: 3}
@@ -275,11 +277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4158899557233307119, guid: 60abc6070a1461d4f8f3ac00947b0c38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickQuit
+      value: GoStart
       objectReference: {fileID: 0}
     - target: {fileID: 4158899557233307119, guid: 60abc6070a1461d4f8f3ac00947b0c38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
+      value: SceneChanger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4158899557233307119, guid: 60abc6070a1461d4f8f3ac00947b0c38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -355,11 +357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8302047869528696756, guid: 60abc6070a1461d4f8f3ac00947b0c38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickCharacterChoice
+      value: GoDCS
       objectReference: {fileID: 0}
     - target: {fileID: 8302047869528696756, guid: 60abc6070a1461d4f8f3ac00947b0c38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MainMenu, Assembly-CSharp
+      value: SceneChanger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8302047869528696756, guid: 60abc6070a1461d4f8f3ac00947b0c38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -486,6 +488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf0a882243af6147addca7f08b830b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Naruhodo: {fileID: 0}
+  Mitsurugi: {fileID: 0}
 --- !u!1001 &1597404910
 PrefabInstance:
   m_ObjectHideFlags: 0

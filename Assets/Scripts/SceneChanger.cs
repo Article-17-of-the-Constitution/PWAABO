@@ -25,12 +25,12 @@ public class SceneChanger : MonoBehaviour
 
     }
 
-    public void OnClickGameStart() 
+    public void GoCCS() 
     {
         SceneManager.LoadScene("CCS");
     }
 
-    public void ChoiceNaluhodo() 
+    public void ChoiceNaruhodo() 
     {
         SelectedPlayer = Player.Naruhodo;
         Debug.Log("캐릭터가 나루호도로 설정되었습니다.");
@@ -51,6 +51,10 @@ public class SceneChanger : MonoBehaviour
     public void GoStart() 
     {
         SceneManager.LoadScene("StartScene");
+    }
+    public void GoDCS()
+    {
+        SceneManager.LoadScene("DCS");
     }
 
 }

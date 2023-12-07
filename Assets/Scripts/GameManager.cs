@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private float BrickYInterval = 0;
     public GameObject Naruhodo;
     public GameObject Mitsurugi;
+    public Text LifeTxt;
+    public int Life = 0;
 
     void Awake()
     {
@@ -38,7 +40,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         TimeLimit -= Time.deltaTime;
-
+        timeTxt.text = TimeLimit.ToString("N2");
+        LifeTxt.text = Life.ToString("N2");
 
         if (TimeLimit <= 0)
         {
@@ -63,6 +66,7 @@ public class GameManager : MonoBehaviour
                 BrickCount = 32;
                 BrickXInterval = 3.5f;
                 BrickYInterval = 0.4f;
+                Life = 3;
                 break;
             case DifficultyManager.DifficultyLevel.Hard:
                 TimeLimit *= 0.5f;
@@ -70,6 +74,7 @@ public class GameManager : MonoBehaviour
                 BrickCount = 64;
                 BrickXInterval = 1.4f;
                 BrickYInterval = 0.3f;
+                Life = 1;
                 break;
         }
         Debug.Log("제한 시간이 " + TimeLimit + "초로 설정되었습니다.");
@@ -104,22 +109,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
-        public void GameEnd()
-        {
-            SceneManager.LoadScene("GameOverScene");
-        }
+    public void GameEnd()
+    {
+        SceneManager.LoadScene("GameOverScene");
+    }
 
-        public void GameClear()
+    public void GameClear()
+    {
+        SceneManager.LoadScene("VictoryScene");
+    }
+    void InitGame()
+    {
+        Time.timeScale = 1.0f;
+        SetDifficulty();
+        SetPlayer();
+        SetBricks();
+    }
+    public void LoseLife()
+    {
+        if (Life >= 0)
         {
-            SceneManager.LoadScene("VictoryScene");
+            Life--;
         }
-        void InitGame()
+        else
         {
-            Time.timeScale = 1.0f;
-            SetDifficulty();
-            SetPlayer();
-            SetBricks();
+            GameEnd();
         }
+    }
 
 
-    } 
+}
