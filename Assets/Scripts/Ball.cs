@@ -71,6 +71,7 @@ public class Ball : MonoBehaviour
         {
             audioSource.PlayOneShot(DM_CGS_44);
             GameManager.I.LoseLife();
+            transform.position = Vector2.zero;
         }
 
 

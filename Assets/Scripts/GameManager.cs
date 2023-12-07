@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         TimeLimit -= Time.deltaTime;
         timeTxt.text = TimeLimit.ToString("N2");
-        LifeTxt.text = Life.ToString("N2");
+        LifeTxt.text = Life.ToString("N0");
 
         if (TimeLimit <= 0)
         {
@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoseLife()
     {
-        if (Life >= 0)
+        if (Life > 0)
         {
             Life--;
         }
